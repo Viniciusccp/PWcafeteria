@@ -1,0 +1,135 @@
+:root {
+  --bg-color: #f4f1eb; /* cor de fundo suave, creme */
+  --form-bg: rgba(255, 255, 255, 0.8); /* fundo semi-transparente para o formulário */
+  --text-color: #2d2d2d; /* cor do texto, tom mais neutro para maior legibilidade */
+  --highlight-color: #006747; /* verde Starbucks */
+  --input-bg: rgba(255, 255, 255, 0.6); /* fundo dos inputs */
+  --border-color: #6f4f28; /* marrom escuro para detalhes */
+  --button-bg: #006747; /* fundo do botão verde */
+  --button-hover: #004e3a; /* fundo do botão ao passar o mouse em tom mais escuro de verde */
+  --glass-blur: 8px; /* efeito de desfoque */
+  --shadow-color: rgba(0, 0, 0, 0.3); /* sombra suave */
+}
+
+body {
+  font-family: 'Times New Roman', sans-serif;
+  background-color: #004b32; /* fundo verde escuro estático */
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-box {
+  background: var(--form-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px var(--shadow-color);
+  text-align: center;
+  width: 350px;
+  backdrop-filter: blur(var(--glass-blur));
+  border: 2px solid #6f4f28; /* borda marrom escuro */
+  transition: transform 0.3s ease-in-out;
+}
+
+.form-box:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--highlight-color);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--button-bg);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+input {
+  background: var(--input-bg);
+  border: 1px solid #6f4f28; /* borda marrom escuro nos inputs */
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--highlight-color);
+  box-shadow: 0 0 10px rgba(0, 103, 71, 0.5);
+}
+
+.botao-entrada {
+  background: var(--button-bg);
+  border: none;
+  padding: 12px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.botao-entrada:hover {
+  background: var(--button-hover);
+  transform: scale(1.05);
+}
+
+.links a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--button-hover);
+}
+
+.forgot-password {
+  font-size: 14px;
+}
+
+.register-link {
+  font-size: 14px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agende Seu Café - Café Harmonia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="container topo">
+            <h1 class="logo">Café Harmonia</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="agenda">
+            <h2>Agende Seu Café</h2>
+            <p>Escolha o horário, o tipo de café que deseja e venha relaxar no ambiente perfeito.</p>
+
+            <div class="agenda-container">
+                <form class="form-agenda">
+                    <label for="barista">Barista:</label>
+                    <select id="barista" name="barista">
+                        <option value="joao">João</option>
+                        <option value="pedro">Pedro</option>
+                        <option value="lucas">Lucas</option>
+                    </select>
+
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" />
+
+                    <label for="tipo-cafe">Tipo de Café:</label>
+                    <select id="tipo-cafe" name="tipo-cafe">
+                        <option value="expresso">Expresso</option>
+                        <option value="cappuccino">Cappuccino</option>
+                        <option value="latte">Latte</option>
+                        <option value="mocha">Mocha</option>
+                        <option value="americano">Americano</option>
+                    </select>
+
+                    <a href="#horarios" class="botao-entrada">Ver Horários</a>
+                </form>
+            </div>
+
+            <div id="horarios" class="calendario-placeholder">
+                <p><strong>Horários disponíveis:</strong></p>
+                <div class="horarios-lista">
+                    <span class="horario">09:00</span>
+                    <span class="horario">10:30</span>
+                    <span class="horario">12:00</span>
+                    <span class="horario">14:00</span>
+                    <span class="horario">15:30</span>
+                    <span class="horario">17:00</span>
+                </div>
+            
+                <button id="confirmar-btn" class="botao-confirmar" style="display: none;">Confirmar Reserva</button>
+                <p id="mensagem-confirmacao" class="mensagem-reserva" style="display: none;">✅ Reserva feita com sucesso!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Café Harmonia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
